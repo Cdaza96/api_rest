@@ -19,6 +19,12 @@ router.get("/users", function (req, res) {
   });
 });
 
-router.get("/getAll/:status", (req, res) => uCount.getAll(req, res));
+router.get("/users/getAll/:status", (req, res) => uCount.getAll(req, res));
+
+router.get("/users/getById/:status", (req, res) => uCount.getById(req, res));
+
+router.get("/users/getByStatus/:status", (req, res) =>
+  uCount.getByStatus(req, res)
+);
 
 module.exports = router;
